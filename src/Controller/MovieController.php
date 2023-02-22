@@ -330,8 +330,10 @@ class MovieController extends AbstractController
      */
     public function getMovie(int $idMovie) : Response
     {
+      //
+      $movie_key = array_search( $idMovie, array_column($this->_movies, 'id'));
       //Vérifier que $idMovie est un indice du tableau
-      if(isset ($this->_movies[$idMovie]))
+      if(isset ($this->_movies[$movie_key]))
       {
         $output = $this->render(
           'movie/get.html.twig',

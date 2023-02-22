@@ -6,6 +6,7 @@
             <img src= "https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
             <h5 style="color:green";> Sorti le : {{movie.release_date}} </h5>
             <p style="color:blue"> Résumé du film : {{movie.overview}} </p>
+            <a href="{{path("app_movie_get",{id:idMovie})}}"</a>
         </li>
     {% endfor %}
 </ul>

@@ -1,0 +1,11 @@
+<h1>Listes des {{ movies| length }} films</h1>
+<ul>
+    {% for movie in movies %}
+        <li>
+            <h2 style="color:red";> Titre du film : {{movie.title}} </h2>
+            <img src= "https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
+            <h5 style="color:green";> Sorti le : {{movie.release_date}} </h5>
+            <p style="color:blue"> Résumé du film : {{movie.overview}} </p>
+        </li>
+    {% endfor %}
+</ul>

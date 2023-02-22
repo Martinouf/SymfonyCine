@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ET VOILAAA FILM{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1 style="color:purple">On va afficher la fiche du film</h1>
+    <h3 style="color:red";> {{movie.title}} </h3>
+    <img src= "https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"/>
+    <h6 style="color:blue"> {{movie.overview}} </h6>
+</div>
+{% endblock %}
